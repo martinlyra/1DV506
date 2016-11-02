@@ -4,16 +4,16 @@ import java.util.Random;
 
 public class TelefonNummer {
 
-	private static final String PhoneNumberFormat = "0XXX-ZXXXXX";
+	private static final String PHONE_NUMBER_FORMAT = "0XXX-ZXXXXX";
 	
 	public static void main(String[] args) {
 
 		String phoneNumber = "";
 		Random rng = new Random();
 		
-		for (int i = 0; i < PhoneNumberFormat.length(); i++)
+		for (int i = 0; i < PHONE_NUMBER_FORMAT.length(); i++)
 		{
-			char c = PhoneNumberFormat.charAt(i);
+			char c = PHONE_NUMBER_FORMAT.charAt(i);
 			
 			if (isDigit(c) || c == '-')
 				phoneNumber += c;
@@ -31,11 +31,11 @@ public class TelefonNummer {
 		
 	}
 	
-	private static final String Digits = "1234567890";
+	private static final String DIGITS = "1234567890";
 	
 	private static boolean isDigit(char c)
 	{
-		return Digits.indexOf(c) > -1;
+		return DIGITS.indexOf(c) > -1;
 	}
 
 }

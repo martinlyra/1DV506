@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Tiden {
 	
-	private static final int HourInMinutes = 60;
-	private static final int MinuteInSeconds = 60;
+	private static final int HOUR_IN_MINUTES = 60;
+	private static final int MINUTE_IN_SECONDS = 60;
 	
-	private static final int HourInSeconds = HourInMinutes * MinuteInSeconds;
+	private static final int HOUR_IN_SECONDS = HOUR_IN_MINUTES*MINUTE_IN_SECONDS;
 
 	public static void main(String[] args) {
 		
@@ -21,11 +21,11 @@ public class Tiden {
 		System.out.print("Ange antal sekunder: ");
 		int seconds = input.nextInt();
 		
-		totalHours = (int)Math.floor(seconds/HourInSeconds);
-		seconds -= totalHours*HourInSeconds;
+		totalHours = (int)Math.floor(seconds/HOUR_IN_SECONDS);
+		seconds -= totalHours*HOUR_IN_SECONDS;
 		
-		totalMinutes = (int)Math.floor(seconds/MinuteInSeconds);
-		seconds -= totalMinutes*MinuteInSeconds;
+		totalMinutes = (int)Math.floor(seconds/MINUTE_IN_SECONDS);
+		seconds -= totalMinutes*MINUTE_IN_SECONDS;
 		
 		totalSeconds = seconds;
 		

@@ -5,18 +5,18 @@ import java.util.Scanner;
 public class VaxelPengar {
 	
 	private static class CurrencyInfo {
-		public final int Value;
-		public final CurrencyType Type;
+		public final int VALUE;
+		public final CurrencyType TYPE;
 		
 		public CurrencyInfo(int value, CurrencyType type)
 		{
-			this.Value = value;
-			this.Type = type;
+			this.VALUE = value;
+			this.TYPE = type;
 		}
 		
 		public String toString()
 		{
-			return Integer.toString(Value) + "-" + (Type == CurrencyType.BILL ? "lappar" : "kronor");
+			return Integer.toString(VALUE) + "-" + (TYPE == CurrencyType.BILL ? "lappar" : "kronor");
 		}
 	}
 	
@@ -58,7 +58,7 @@ public class VaxelPengar {
 		int changeRemainder = change;
 		for (int i = 0; i < currencyInfos.length; i++)
 		{
-			int value = currencyInfos[i].Value;
+			int value = currencyInfos[i].VALUE;
 			int count = (int) Math.floor(changeRemainder/value);
 			System.out.printf("%s\t: %d\n", currencyInfos[i], count);
 			changeRemainder -= value*count;

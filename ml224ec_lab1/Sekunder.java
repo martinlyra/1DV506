@@ -4,26 +4,26 @@ import java.util.Scanner;
 
 public class Sekunder {
 
-	private static final int HourInMinutes = 60;
-	private static final int MinuteInSeconds = 60;
+	private static final int HOUR_IN_MINUTES = 60;
+	private static final int MINUTE_IN_SECONDS = 60;
 	
-	private static final int HourInSeconds = HourInMinutes*MinuteInSeconds;
+	private static final int HOUR_IN_SECONDS = HOUR_IN_MINUTES*MINUTE_IN_SECONDS;
 	
 	public static void main(String[] args) {
 		
-		float seconds = 0;
+		int seconds = 0;
 		
 		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		
 		System.out.print("Timmar: ");
-		seconds += input.nextFloat()*HourInSeconds;
+		seconds += (int) input.nextFloat()*HOUR_IN_SECONDS;
 		
 		System.out.print("Minuter: ");
-		seconds += input.nextFloat()*MinuteInSeconds;
+		seconds += (int) input.nextFloat()*MINUTE_IN_SECONDS;
 		
 		System.out.print("Sekunder: ");
-		seconds += input.nextFloat();
+		seconds += (int) input.nextFloat();
 		
 		System.out.printf("Totala antalet sekunder: %d\n", seconds);
 
