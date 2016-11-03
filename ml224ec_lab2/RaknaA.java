@@ -27,7 +27,7 @@ public class RaknaA {
 			Entry<Character, Integer> e = it.next();
 			System.out.printf("Det finns %d av \'%s\'\n",e.getValue(),e.getKey());
 		}
-
+		
 	}
 
 }
