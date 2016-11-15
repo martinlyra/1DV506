@@ -51,7 +51,6 @@ public class Lonerevision {
 		else
 		{
 			int i = size/2;
-			System.out.println(i);
 			median = (INTEGERS.get(i) + INTEGERS.get(i-1))/2;
 		}
 		
