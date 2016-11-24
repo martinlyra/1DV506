@@ -25,12 +25,12 @@ public class TartLjus {
 			
 			System.out.printf(
 					"Till din %d:%s födelsedag, köp "
-					+ (bought > 0 ? "%d låd%s" : "inget")
+					+ (bought > 0 ? "%d låd%s" : "inget") // conditional format string construction
 					+ ".\n"
 					, age
-					, (i < 3 ? "a" : "e")
+					, (i < 3 ? "a" : "e") // 1:a 2:a 3:e 4:e
 					, bought
-					, (bought > 1 ? "or" : "a")
+					, (bought > 1 ? "or" : "a") // lådor (boxes) or låda (box)
 					);
 			boxes += bought;
 		}
@@ -39,8 +39,8 @@ public class TartLjus {
 				"Under dina %d år har %d låd%s av ljus köpts. Kvar över blev %s ljus."
 				, MAX_AGE
 				, boxes
-				, (boxes > 1 ? "or" : "a")
-				, (remaining > 0 ? remaining : "inga")
+				, (boxes > 1 ? "or" : "a") // lådor (boxes) or låda (box)
+				, (remaining > 0 ? remaining : "inga") // number or inga (none)
 				);
 	}
 

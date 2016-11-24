@@ -21,6 +21,7 @@ public class OmvandOrdning {
 				break;
 			INTEGERS.add(input);
 		}
+		INPUT.close();
 
 		System.out.printf("Antal positiva tal: %d\nBaklänges: ", INTEGERS.size());
 		for (int i = INTEGERS.size()-1; i >= 0; i--)

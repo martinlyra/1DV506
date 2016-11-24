@@ -4,7 +4,8 @@ import java.util.Scanner; // assigner placed a ban on arrays.. such is life
 
 public class NastaStorsta {
 
-	private static final int MAX_INTEGERS = 5;
+	// change this constant below to increase or decrease numbers to be inputted
+	private static final int MAX_INTEGERS = 5; 
 	private static final Scanner INPUT = new Scanner(System.in);
 	
 	public static void main(String[] args) 
@@ -25,6 +26,7 @@ public class NastaStorsta {
 			else if (second_biggest == null || value > second_biggest)
 				second_biggest = value;
 		}
+		INPUT.close();
 		
 		System.out.printf("Den näst största talet är %d",second_biggest);
 		

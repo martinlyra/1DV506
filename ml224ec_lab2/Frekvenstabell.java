@@ -44,12 +44,13 @@ public class Frekvenstabell {
 			int number = DICE.nextInt(6); 
 			// More OO, but also more ugly, version
 			// if this wasn't for Java, it would been more beautiful
-			//FREQUENCY_TABLE[number].Value = (Integer)FREQUENCY_TABLE[number].Value + 1; 
+			//FREQUENCY_TABLE[number].Value++; 
 			
 			// Simple version, nice and clean!
 			FREQUENCY_TABLE[number]++;
 		}
 		
+		System.out.printf("Frekvenstabell över %d slag med en d6:\n", MAX_DICE_ROLLS);
 		for (int i = 0; i < FREQUENCY_TABLE.length; i++)
 		{
 			// OO version

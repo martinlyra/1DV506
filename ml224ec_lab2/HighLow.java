@@ -47,7 +47,7 @@ public class HighLow {
 				System.out.printf("Gissa ett nummer, %s: försöket: ",s);
 				val = INPUT.nextInt();
 				if (val < RANGE_MIN || val > RANGE_MAX)
-					System.out.println("Ditt nummer är utanför gränsvärdet, var vänligen och försök igen");
+					System.out.println("Ditt nummer var utanför gränsvärdet, var vänligen och försök igen");
 				else
 				{
 					attempts++;
@@ -64,6 +64,7 @@ public class HighLow {
 			else
 				System.out.println("Lettråd: hög");
 		}
+		INPUT.close();
 		System.out.println("Du förlorade leken, du förbrukade alla dina tio försök!");
 	}
 

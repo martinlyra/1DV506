@@ -9,10 +9,10 @@ public class BytaPlats {
 		for (int i = 0; i < Math.floor(text.length/2); i++)
 		{
 			int r = text.length - 1 - i;
-			char c = text[r];
-
-			text[r] = text[i];
-			text[i] = c;
+			
+			char c = text[r]; // prepare swapping
+			text[r] = text[i]; // swap
+			text[i] = c; // finish swapping
 		}
 		
 		System.out.println(text);

@@ -29,7 +29,7 @@ public class Lonerevision {
 					INTEGERS.add(I);
 					if (I > highest)
 						highest = I;
-					else if (lowest == null || I < lowest)
+					else if (lowest == null || I < lowest) // assign this variable at beginning
 						lowest = I;
 				}
 				if (abort)
@@ -46,12 +46,12 @@ public class Lonerevision {
 		int average = sum/size;
 		
 		int median;
-		if ((size % 2) > 0)
+		if ((size % 2) > 0) // if the size is uneven, do the easy way
 			median = INTEGERS.get((int)Math.floor(size/2));
 		else
 		{
 			int i = size/2;
-			median = (INTEGERS.get(i) + INTEGERS.get(i-1))/2;
+			median = (INTEGERS.get(i) + INTEGERS.get(i-1))/2; // lists start at 0, suffice flooring than rounding
 		}
 		
 		int spread = highest - lowest;

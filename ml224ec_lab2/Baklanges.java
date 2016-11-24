@@ -10,6 +10,7 @@ public class Baklanges {
 		
 		System.out.print("Mata in ett textrad: ");
 		char[] input = INPUT.nextLine().toCharArray();
+		INPUT.close();
 		String output = "";
 		
 		for (int i = input.length-1; i >= 0; i--)

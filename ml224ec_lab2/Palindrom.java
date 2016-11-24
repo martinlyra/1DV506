@@ -10,13 +10,14 @@ public class Palindrom {
 		
 		System.out.print("Skriv in text för att testa om den är ett palindrom: ");
 		String input = INPUT.nextLine().trim();
+		INPUT.close();
 		
 		char[] char_stream = input.toLowerCase().toCharArray();
 		String clean = "";
 		for (int i = 0; i < input.length(); i++)
 		{
 			char c = char_stream[i];
-			if (Character.isLetter(c))
+			if (Character.isLetter(c)) // we don't want digits or specials
 				clean += c;
 		}
 		
@@ -27,7 +28,7 @@ public class Palindrom {
 		
 		System.out.printf("%s är %s ett palindrom.\n"
 				,input
-				,(reversed.compareTo(clean) == 0 ? "" : "inte"));
+				,(reversed.compareTo(clean) == 0 ? "" : "inte")); // returns an non-zero integer if there were at least one difference
 	}
 
 }

@@ -15,6 +15,7 @@ public class RaknaA {
 		
 		System.out.print("Ge mig ett snitt text: ");
 		String string = INPUT.nextLine();
+		INPUT.close();
 		
 		char[] text = string.toCharArray();
 		for (int i = 0; i < string.length(); i++)

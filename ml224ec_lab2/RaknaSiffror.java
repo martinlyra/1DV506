@@ -15,6 +15,7 @@ public class RaknaSiffror {
 		
 		System.out.print("Ange ett heltal: ");
 		Integer value = INPUT.nextInt();
+		INPUT.close();
 		
 		int amount_zero = 0;
 		int amount_even = 0;
@@ -51,7 +52,7 @@ public class RaknaSiffror {
 			int c = Integer.parseInt(Character.toString(value_string[i])); 
 			if (c == 0)
 				amount_zero++;
-			else if (c%2 == 0)
+			else if (c%2 == 0) // even numbers give 0, uneven give 1 for modulus (%) 2
 				amount_even++;
 			else
 				amount_odd++;
