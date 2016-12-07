@@ -2,6 +2,36 @@ package ml224ec_lab3;
 
 public class Arrays {
 	
+	public static void main(String[] args) {
+
+		int[] array = {7,4,5,2,8,9,12,30,-6,-7,-8};
+		int[] seq1 = {4,5,2};
+		int[] seq2 = {7,8,9,10};
+
+		int[] array_added = Arrays.addN(array, 500);
+		int[] array_reversed = Arrays.reverse(array);
+		int[] array_sorted = Arrays.sort(array);
+		boolean array_bool_result_true = Arrays.hasN(array, 12);
+		boolean array_bool_result_false = Arrays.hasN(array, 0);
+		boolean array_bool_has_seq = Arrays.hasSubsequence(array, seq1);
+		boolean array_bool_hasnt_seq = Arrays.hasSubsequence(array, seq2);
+		
+		System.out.println("Generic functions:");
+		System.out.printf("toString()\t: %s\n",Arrays.toString(array));
+		System.out.printf("sum()\t\t: %s\n",Arrays.sum(array));
+		
+		System.out.println("\nArray operations:");
+		System.out.printf("add()\t\t: %s\n", Arrays.toString(array_added));
+		System.out.printf("reverse()\t: %s\n", Arrays.toString(array_reversed));
+		System.out.printf("sort()\t\t: %s\n", Arrays.toString(array_sorted));
+		
+		System.out.println("\nBoolean functions:");
+		System.out.printf("hasN()\t\t: Has 12: %s\n", (array_bool_result_true ? "True" : "False"));
+		System.out.printf("hasN()\t\t: Has 0: %s\n", (array_bool_result_false ? "True" : "False"));
+		System.out.printf("hasSequence()\t: Has %s: %s\n", Arrays.toString(seq1),(array_bool_has_seq ? "True" : "False"));
+		System.out.printf("hasSequence()\t: Has %s: %s\n", Arrays.toString(seq2),(array_bool_hasnt_seq ? "True" : "False"));
+	}
+	
 	public static int sum(int[] array)
 	{
 		int r = 0;
