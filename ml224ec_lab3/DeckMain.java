@@ -12,7 +12,7 @@ public class DeckMain {
 		System.out.printf("Can the deck be shuffled? %s\n",
 				( deck.canShuffle() ? "Yes": "No"));
 		deck.shuffleDeck();
-		Card[] hand = deck.dealCards(HAND_AMOUNT);
+		Card[] hand = deck.takeCards(HAND_AMOUNT);
 		System.out.printf("%d cards has been dealt for your hand\n", HAND_AMOUNT);
 		
 		System.out.printf("Cards remaining: %d\n", deck.cardsRemaining());

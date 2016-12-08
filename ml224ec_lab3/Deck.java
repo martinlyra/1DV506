@@ -32,7 +32,13 @@ public class Deck {
 		}
 	}
 	
-	public Card[] dealCards(int amount)
+	public Card takeCard()
+	{
+		takenAmount++;
+		return currentSet.get(takenAmount - 1); // look at the line above
+	}
+	
+	public Card[] takeCards(int amount)
 	{
 		Card[] cards = new Card[amount];
 		
