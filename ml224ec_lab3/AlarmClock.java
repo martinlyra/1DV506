@@ -1,3 +1,12 @@
+// DISCLAIMER:
+// This class file or source is not mine. 
+// Nor do I claim ownership of this work.
+// But the assignment required me to use
+// this for assignment 3.4 (AlarmMain.java)
+// ... There is that. Otherwise you wouldn't
+// be able to use the aforementioned file
+// - ml224ec
+
 package ml224ec_lab3; // necessary change, was just "lab3"
 
 public class AlarmClock {

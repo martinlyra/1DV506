@@ -14,7 +14,7 @@ public class Play123Main {
 				winCount++;
 		}
 		
-		Double winPercentage = ((double)winCount/PLAY_COUNT)*100; // 1/10000 * 100 = 1/100
+		Double winPercentage = ((double)winCount/PLAY_COUNT)*100;
 		System.out.printf("Out of %d '123's, circa %d%% of the games won.",
 				PLAY_COUNT, winPercentage.intValue());
 	}
@@ -37,7 +37,7 @@ public class Play123Main {
 			
 			step = (step > 2) ? 0 : step + 1;
 		}
-		return true; // you are the only one!
+		return true; // you are the lucky one!
 	}
 
 }
