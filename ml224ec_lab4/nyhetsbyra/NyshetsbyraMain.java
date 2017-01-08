@@ -24,13 +24,16 @@ public class NyshetsbyraMain {
 		sim.initialize();
 		sim.run();
 
+		// Prepare for output
 		List<Newspaper> nps = sim.getNewspapers();
-		nps.sort(Collections.reverseOrder());
+		nps.sort(Collections.reverseOrder()); // Sorts by highest to lowest
 		
+		// Output time!
 		System.out.printf("%d articles has been created by %d newspapers and shared across %d agencies.\n",
 				sim.getNews().size(),
 				sim.getNewspapers().size(),
 				sim.getNewsAgencies().size());
+		
 		System.out.println("Scoreboard:");
 		Iterator<Newspaper> nit = nps.iterator();
 		while (nit.hasNext())

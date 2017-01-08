@@ -31,14 +31,14 @@ public class Simulator {
 	// Setup all necessary for an simulation
 	public void initialize()
 	{
-		for (int i = 0; i < maxNewspapers; i++)
+		for (int i = 0; i < maxNewspapers; i++) // Create all the newspapers
 			newspapers.add(new Newspaper());
 		
-		for (int i = 0; i < maxAgencies; i++)
+		for (int i = 0; i < maxAgencies; i++) // Create all the agencies (currently only one)
 		{
 			NewsAgency na = new NewsAgency();
 			newsAgencies.add(na);
-			for (int j = 0; j < newspapers.size(); j++)
+			for (int j = 0; j < newspapers.size(); j++) // register all the newspapers!
 				na.register(newspapers.get(j));
 		}
 	}
