@@ -9,8 +9,8 @@ public interface Stack {
 	
 	void push(Object element);
 	
-	Object pop() throws EmptyStackException;	// get topmost (last) element, removing from stack
-	Object peek() throws EmptyStackException;  // get topmost (last) element, without removal
+	Object pop();	// get topmost (last) element, removing from stack
+	Object peek();  // get topmost (last) element, without removal
 	
 	Iterator<Object> iterator();
 }

@@ -23,17 +23,6 @@ public class ArrayStack implements Stack {
 	public int size() {
 		return elements.length;
 	}
-
-	/*
-	@Override
-	public boolean isEmpty() {
-		if (elements.length > 0)
-			for (int i = 0; i < elements.length; i++)
-				if (elements[i] != null)
-					return false;
-		return true;
-	}
-	*/
 	
 	@Override
 	public boolean isEmpty() {
@@ -53,27 +42,41 @@ public class ArrayStack implements Stack {
 	}
 
 	@Override
-	public Object pop() throws EmptyStackException {
-		if (isEmpty())
-			throw new EmptyStackException("Illegal operation on empty stack!\n");
-		
-		Object element = elements[position]; // store the item first
+	public Object pop() {
+		try {
+			if (isEmpty())
+				throw new EmptyStackException("Illegal operation on empty stack!\n");
 
-		Object[] newArray = new Object[elements.length - 1];
-		position--;
+			Object element = elements[position]; // store the item first
+
+			Object[] newArray = new Object[elements.length - 1];
+			position--;
 		
-		for (int i = 0; i < newArray.length; i++)
-			newArray[i] = elements[i];
+			for (int i = 0; i < newArray.length; i++)
+				newArray[i] = elements[i];
 		
-		elements = newArray;
-		return element;
+			elements = newArray;
+			return element;
+		} 
+		catch (Exception e)
+		{
+			System.out.println(e);
+			return null;
+		}
 	}
 
 	@Override
-	public Object peek() throws EmptyStackException {
-		if (isEmpty())
-			throw new EmptyStackException("Illegal operation on empty stack!\n");
-		return elements[position];
+	public Object peek() {
+		try {
+			if (isEmpty())
+				throw new EmptyStackException("Illegal operation on empty stack!\n");
+			return elements[position];
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+			return null;
+		}
 	}
 
 	@Override

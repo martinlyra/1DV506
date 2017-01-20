@@ -23,15 +23,10 @@ public class DrunkenWalk {
 		{
 			currentWalker = new RandomWalk(maxSteps, size);
 			
-			while (currentWalker.moreSteps())
-			{
-				currentWalker.takeStep();
-				if (!currentWalker.inBounds())
-				{
-					amountOutside++;
-					break;
-				}
-			}
+			currentWalker.walk();
+			
+			if (!currentWalker.inBounds())
+				amountOutside++;
 		}
 	}
 

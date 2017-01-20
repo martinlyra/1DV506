@@ -60,6 +60,16 @@ public class RandomWalk {
 				within(position_y, -maxDistance, maxDistance);
 	}
 	
+	public void walk()
+	{
+		while (moreSteps())
+		{
+			takeStep();
+			if (!inBounds())
+				break;
+		}
+	}
+	
 	private boolean within(int x, int lower, int upper)
 	{
 		return lower <= x && x <= upper;
